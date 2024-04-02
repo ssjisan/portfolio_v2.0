@@ -1,12 +1,14 @@
 import { Box, Container, IconButton, useMediaQuery } from "@mui/material"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../DataProcessing/DataProcessing";
 // import Logo from "../assets/Logo";
 import { Menu, Moon, Sun } from "../assets/Icons";
 import MenuDrawer from "./MenuDrawer";
 export default function Navbar() {
-    const { goToTop, handleMode, light,toggleDrawer, open } = useContext(DataContext);
+    const { goToTop, handleMode, light, toggleDrawer, open } = useContext(DataContext);
+    // eslint-disable-next-line
+    const { pathname } = useLocation();
 
     // eslint-disable-next-line
     const forBelow768 = useMediaQuery("(max-width:768px)");
@@ -22,7 +24,8 @@ export default function Navbar() {
         position: "fixed",
         width: "100%",
         zIndex: 1000,
-        background: light ? "#121120" : "#FFF",
+        background: pathname === "/" ? "transparent" : (light ? "rgba(18, 17, 32, 0.48)" : "rgba(255, 255, 255, 0.48)"),
+        backdropFilter: pathname !== "/" && "blur(16px)",
     }
     const LogoSx = {
         width: forBelow768 ? "140px" : "196px",
@@ -62,7 +65,7 @@ export default function Navbar() {
                     </IconButton>
                 </Box>
             </Container>
-            <MenuDrawer open={open}/>
+            <MenuDrawer open={open} />
         </Box>
     )
 }

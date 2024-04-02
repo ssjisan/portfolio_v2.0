@@ -9,7 +9,7 @@ export default function Projects() {
     const { light } = useContext(DataContext)
 
     return (
-        <Box sx={{ background: light ? "#121120" : "#FFF", height: "100vh", overflowY: "auto" }}>
+        <Box sx={{ background: light ? "#121120" : "#FFF", height: "-webkit-fill-available" }}>
             <Navbar />
             <HeroSection />
             <ProjectList />
