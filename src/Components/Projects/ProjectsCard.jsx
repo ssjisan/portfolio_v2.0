@@ -37,25 +37,27 @@ export default function ProjectsCard() {
                 {Projects.map((data) => {
                     return (
                         <Grid item xs={12} sm={12} md={6} lg={6} key={data.id}>
-                            <Box sx={CardSx} >
-                                <Box sx={{ ...ImageSx, height: forBelow767 ? "480px" : (data.id % 2 === 0 ? "450px" : "580px"), mt: !forBelow767 && (data.id % 2 === 0 && "64px"), }}>
-                                    <img src={data.imgUrl} width="100%" height="100%" style={{ transition: "transform .5s ease-in-out", objectFit: "cover" }} />
-                                </Box>
-                                <Box sx={ContentBoxSx}>
-                                    <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>{data.title}</Typography>
-                                    <Box sx={ChipContainerSx}>
-                                        {
-                                            data.tags.map((data, i) => {
-                                                return (
-                                                    <Box sx={ChipSx} key={i}>
-                                                        <Typography variant="body2" color="text.secondary">{data}</Typography>
-                                                    </Box>
-                                                )
-                                            })
-                                        }
+                            <a href={data.link} style={{ textDecoration: "none" }} target="_blank">
+                                <Box sx={CardSx} >
+                                    <Box sx={{ ...ImageSx, height: forBelow767 ? "480px" : (data.id % 2 === 0 ? "450px" : "580px"), mt: !forBelow767 && (data.id % 2 === 0 && "64px"), }}>
+                                        <img src={data.imgUrl} width="100%" height="100%" style={{ transition: "transform .5s ease-in-out", objectFit: "cover" }} />
+                                    </Box>
+                                    <Box sx={ContentBoxSx}>
+                                        <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>{data.title}</Typography>
+                                        <Box sx={ChipContainerSx}>
+                                            {
+                                                data.tags.map((data, i) => {
+                                                    return (
+                                                        <Box sx={ChipSx} key={i}>
+                                                            <Typography variant="body2" color="text.secondary">{data}</Typography>
+                                                        </Box>
+                                                    )
+                                                })
+                                            }
+                                        </Box>
                                     </Box>
                                 </Box>
-                            </Box>
+                            </a>
                         </Grid>
                     )
                 })

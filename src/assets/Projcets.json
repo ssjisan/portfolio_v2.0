@@ -2,7 +2,8 @@
     {
         "id": 1,
         "title": "Internet Service Provider Website",
-        "imgUrl": "/projcets/1.png",
+        "imgUrl": "/projcets/fenieasy.png",
+        "link":"https://www.behance.net/gallery/195011475/Internet-Service-Provider-Website",
         "tags": [
             "UI/UX Design",
             "Development",
@@ -12,7 +13,8 @@
     {
         "id": 2,
         "title": "Developer Hiring Platform Application",
-        "imgUrl": "/projcets/2.png",
+        "imgUrl": "/projcets/techhack.png",
+        "link":"https://www.behance.net/gallery/195527507/Developer-Hiring-Platform",
         "tags": [
             "UI/UX Design",
             "Development",
@@ -23,6 +25,7 @@
         "id": 3,
         "title": "Self Service Kiosk",
         "imgUrl": "/projcets/3.png",
+        "link":"",
         "tags": [
             "Research",
             "Wireframe",
@@ -33,6 +36,7 @@
         "id": 4,
         "title": "NBR - Aarong VAT Report Portal",
         "imgUrl": "/projcets/4.png",
+        "link":"",
         "tags": [
             "Research",
             "Wireframe",
@@ -43,6 +47,7 @@
         "id": 5,
         "title": "Digital Agency Website",
         "imgUrl": "/projcets/5.png",
+        "link":"",
         "tags": [
             "UI/UX Design",
             "Development",
@@ -53,6 +58,7 @@
         "id": 6,
         "title": "Travel agency Solutions",
         "imgUrl": "/projcets/6.png",
+        "link":"",
         "tags": [
             "Research",
             "Wireframe",
@@ -63,6 +69,7 @@
         "id": 7,
         "title": "Paediatric Orthopeadic Society Website",
         "imgUrl": "/projcets/7.png",
+        "link":"",
         "tags": [
             "UI/UX Design",
             "Development",
