@@ -11,10 +11,21 @@ import { typography } from './typography';
 // ----------------------------------------------------------------------
 
 export default function ThemeProvider({ children }) {
- 
+
   const memoizedValue = useMemo(
     () => ({
       palette: palette(),
+
+      breakpoints: {
+        values: {
+          xs: 0,
+          sm: 600,
+          md: 767,
+          lg: 1200,
+          xl: 1536,
+        },
+      },
+
       typography,
     }),
     []

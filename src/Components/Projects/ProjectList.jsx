@@ -3,7 +3,7 @@ import ProjectsCard from "./ProjectsCard";
 
 export default function ProjectList() {
     return (
-        <Container sx={{ p: "80px 0px" }}>
+        <Container sx={{ pt: "80px", pb: "80px" }}>
              <ProjectsCard />
         </Container>
     )

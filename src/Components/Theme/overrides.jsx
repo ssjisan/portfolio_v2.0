@@ -5,6 +5,7 @@ import { alpha } from '@mui/material/styles';
 export function overrides(theme) {
     return {
         MuiCssBaseline: {
+            
             styleOverrides: {
                 '*': {
                     boxSizing: 'border-box',
@@ -15,7 +16,7 @@ export function overrides(theme) {
                 },
                 '*::-webkit-scrollbar-thumb:hover': {
                     backgroundColor: '#000',
-                }
+                },
             },
             html: {
                 margin: 0,
@@ -31,6 +32,7 @@ export function overrides(theme) {
                 height: '100%',
             },
         },
+        
         MuiButton: {
             styleOverrides: {
                 root: {
