@@ -55,10 +55,10 @@ export const typography = {
     ...responsiveFontSizes({ sm: 18, md: 20, lg: 24 }),
   },
   h5: {
-    fontWeight: 500,
+    fontWeight: 200,
     lineHeight: "140%",
-    fontSize: pxToRem(16),
-    ...responsiveFontSizes({ sm: 16, md: 18, lg: 20 }),
+    fontSize: pxToRem(18),
+    ...responsiveFontSizes({ sm: 16, md: 18, lg: 18 }),
   },
   h6: {
     fontWeight: 500,
@@ -79,7 +79,7 @@ export const typography = {
     ...responsiveFontSizes({ sm: 12, md: 13, lg: 14 }),
   },
   subtitle1: {
-    fontWeight: 400,
+    fontWeight: 500,
     lineHeight: "150%",
     fontSize: pxToRem(14),
     ...responsiveFontSizes({ sm: 14, md: 15, lg: 16 }),

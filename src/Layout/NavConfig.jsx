@@ -11,16 +11,11 @@ const main = [
     },
     {
         id: 3,
-        title: "Career",
-        link: "/career",
-    },
-    {
-        id: 4,
         title: "Projects",
         link: "/projects",
     },
     {
-        id: 5,
+        id: 4,
         title: "Resume",
         link: "/resume",
     }

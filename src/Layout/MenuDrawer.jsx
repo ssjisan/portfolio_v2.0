@@ -68,7 +68,7 @@ export default function MenuDrawer() {
     return (
         <Drawer
             variant="temporary"
-            anchor="right"
+            anchor="top"
             open={open}
             onClose={toggleDrawer}
             sx={DrawerSx}
@@ -87,7 +87,7 @@ export default function MenuDrawer() {
                 {main.map((data) => {
                     return (
                         <Link key={data.id} to={data.link} style={linkStyle} onClick={handleDrawerClose}>
-                            <Typography variant="h1" color={light ? "text.tertiary" : "text.primary"} sx={{ cursor: "pointer" }}>{data.title}</Typography>
+                            <Typography variant="h1" color={light ? "text.tertiary" : "text.primary"} sx={{ cursor: "pointer", textDecoration: pathname === data.link && "underline" }}>{data.title}</Typography>
                         </Link>
                     )
                 })}
