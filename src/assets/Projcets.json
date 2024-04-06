@@ -35,7 +35,7 @@
     {
         "id": 4,
         "title": "NBR - Aarong VAT Report Portal",
-        "imgUrl": "/projcets/4.png",
+        "imgUrl": "/projcets/nbr.png",
         "link":"",
         "tags": [
             "Research",
@@ -56,8 +56,8 @@
     },
     {
         "id": 6,
-        "title": "Travel agency Solutions",
-        "imgUrl": "/projcets/6.png",
+        "title": "Digital Distribution System",
+        "imgUrl": "/projcets/dds.png",
         "link":"",
         "tags": [
             "Research",
@@ -68,7 +68,7 @@
     {
         "id": 7,
         "title": "Paediatric Orthopeadic Society Website",
-        "imgUrl": "/projcets/7.png",
+        "imgUrl": "/projcets/posb.png",
         "link":"",
         "tags": [
             "UI/UX Design",
