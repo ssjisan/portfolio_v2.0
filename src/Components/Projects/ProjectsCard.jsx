@@ -49,7 +49,7 @@ export default function ProjectsCard() {
                                                 data.tags.map((data, i) => {
                                                     return (
                                                         <Box sx={ChipSx} key={i}>
-                                                            <Typography variant="body2" color="text.secondary">{data}</Typography>
+                                                            <Typography variant="subtitle2" color="text.secondary">{data}</Typography>
                                                         </Box>
                                                     )
                                                 })

@@ -40,7 +40,7 @@ export default function LinkedMedia() {
                                     <Box sx={IconBodySx}>
                                         {data.icon}
                                     </Box>
-                                    <Typography variant="subtitle1" color={light ? "text.tertiary" : "text.primary"}>Follow on {data.title}</Typography>
+                                    <Typography variant="subtitle2" color={light ? "text.tertiary" : "text.primary"}>Follow on {data.title}</Typography>
                                 </Box>
                             </a>
                         )
@@ -50,7 +50,7 @@ export default function LinkedMedia() {
                     <Box sx={IconBodySx}>
                         <Mail />
                     </Box>
-                    <Typography color={light ? "text.tertiary" : "text.primary"}>ssjisan.dev@gmail.com</Typography>
+                    <Typography color={light ? "text.tertiary" : "text.primary"} variant="subtitle2">ssjisan.dev@gmail.com</Typography>
                 </Box>
             </Box>
         </Box>

@@ -11,7 +11,7 @@ export default function Certification() {
                 return (
                     <a href={data.link} key={data.id} style={{ textDecoration: "none" }} target="_blank">
                         <Box sx={{ mb: "16px" }}>
-                            <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>{data.name} <span style={{ fontWeight: 400, color: "#919EAB" }}>from {data.from}</span></Typography>
+                            <Typography variant="h5" color={light ? "text.tertiary" : "text.primary"}>{data.name} <span style={{ fontWeight: 300, color: "#919EAB" }}>from {data.from}</span></Typography>
                         </Box>
                     </a>
                 )

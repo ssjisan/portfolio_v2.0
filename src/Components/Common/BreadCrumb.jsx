@@ -17,7 +17,7 @@ export default function BreadCrumb() {
     const IconBoxSx = { width: "24px", height: "24px", display: "flex", justifyContent: "center", alignItems: "center" }
     return (
         <Box sx={BreadcrumbSx}>
-            <Link to="/" style={{textDecoration:"none"}}>
+            <Link to="/" style={{ textDecoration: "none" }}>
                 <Typography variant="subtitle2" color="text.secondary">Home</Typography>
             </Link>
             <Box sx={IconBoxSx}>

@@ -21,8 +21,8 @@ export default function Experience() {
                 return (
                     <Box sx={{ mb: "64px" }} key={data.id}>
                         <Box sx={{ mb: "24px" }}>
-                            <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>{data.name}. <span style={{ fontWeight: 400, color: "#919EAB" }}>{data.position}</span></Typography>
-                            <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>{data.time}. <span style={{ fontWeight: 400, color: "#919EAB" }}>{data.location}</span></Typography>
+                            <Typography variant="h5" color={light ? "text.tertiary" : "text.primary"}>{data.name}. <span style={{ fontWeight: 300, color: "#919EAB" }}>{data.position}</span></Typography>
+                            <Typography variant="h5" color={light ? "text.tertiary" : "text.primary"}>{data.time}. <span style={{ fontWeight: 300, color: "#919EAB" }}>{data.location}</span></Typography>
                         </Box>
                         {
                             data.responsibilities.map((data, i) => {
@@ -31,7 +31,7 @@ export default function Experience() {
                                         <Box sx={IconSx}>
                                             <BulletPointIcon />
                                         </Box>
-                                        <Typography variant="h5" color="text.secondary">{data}.</Typography>
+                                        <Typography variant="subtitle1" color="text.secondary">{data}.</Typography>
                                     </Box>
                                 )
                             })

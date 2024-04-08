@@ -23,7 +23,7 @@ export default function DownloadResume() {
             <Box sx={ContainerSx}>
                 <Box sx={{ display: "flex", flexDirection: "column", gap: "16px", textAlign: forBelow676 && "center" }}>
                     <Typography variant="h3" color={light ? "text.tertiary" : "text.primary"}>Need to know more?</Typography>
-                    <Typography variant="h5" color={light ? "text.tertiary" : "text.primary"}>Additional details available in full resume</Typography>
+                    <Typography variant="body1" color={light ? "text.tertiary" : "text.primary"}>Additional details available in full resume</Typography>
                 </Box>
                 <Box sx={{ background: light ? "#FFFFFF" : "#111827", p: "12px 24px", cursor: "pointer", borderRadius: "8px" }}>
                     <Typography variant="h6" sx={{ color: light ? "#111827" : "#FFFFFF" }}>Download Resume</Typography>
