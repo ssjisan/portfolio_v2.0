@@ -25,16 +25,16 @@ export function responsiveFontSizes({ sm, md, lg, lineHeight: smLineHeight, mdLi
 
 
 // ----------------------------------------------------------------------
-export const primaryFont = 'Inter , sans-serif ';
+export const primaryFont = 'Noto Sans , sans-serif ';
 
 export const typography = {
   fontFamily: primaryFont,
 
   h1: {
     fontWeight: 700,
-    lineHeight: "120%",
+    lineHeight: "140%",
     fontSize: pxToRem(32),
-    ...responsiveFontSizes({ sm: 32, smLineHeight: "120%", md: 40, mdLineHeight: "140%", lg: 48, lgLineHeight: "150%" }),
+    ...responsiveFontSizes({ sm: 32, md: 40, lg: 48 }),
   },
   h2: {
     fontWeight: 700,
@@ -44,48 +44,48 @@ export const typography = {
   },
   h3: {
     fontWeight: 700,
-    lineHeight: "120%",
+    lineHeight: "140%",
     fontSize: pxToRem(20),
     ...responsiveFontSizes({ sm: 20, md: 24, lg: 32 }),
   },
   h4: {
-    fontWeight: 600,
-    lineHeight: "150%",
+    fontWeight: 700,
+    lineHeight: "140%",
     fontSize: pxToRem(18),
     ...responsiveFontSizes({ sm: 18, md: 20, lg: 24 }),
   },
   h5: {
-    fontWeight: 200,
+    fontWeight: 600,
     lineHeight: "140%",
     fontSize: pxToRem(18),
-    ...responsiveFontSizes({ sm: 16, md: 18, lg: 18 }),
+    ...responsiveFontSizes({ sm: 16, md: 18, lg: 20 }),
   },
   h6: {
-    fontWeight: 500,
+    fontWeight: 400,
     lineHeight: "normal",
     fontSize: pxToRem(16),
-    ...responsiveFontSizes({ sm: 16, md: 16, lg: 18 }),
+    ...responsiveFontSizes({ sm: 16, md: 16, lg: 20 }),
   },
   body1: {
-    fontWeight: 500,
+    fontWeight: 300,
     lineHeight: "150%",
     fontSize: pxToRem(14),
-    ...responsiveFontSizes({ sm: 14, md: 15, lg: 16 }),
-  },
-  body2: {
-    fontWeight: 600,
-    lineHeight: "150%",
-    fontSize: pxToRem(12),
-    ...responsiveFontSizes({ sm: 12, md: 13, lg: 14 }),
+    ...responsiveFontSizes({ sm: 14, md: 16, lg: 20 }),
   },
   subtitle1: {
-    fontWeight: 500,
+    fontWeight: 400,
     lineHeight: "150%",
     fontSize: pxToRem(14),
-    ...responsiveFontSizes({ sm: 14, md: 15, lg: 16 }),
+    ...responsiveFontSizes({ sm: 14, md: 16, lg: 18 }),
+  },
+  body2: {
+    fontWeight: 400,
+    lineHeight: "150%",
+    fontSize: pxToRem(12),
+    ...responsiveFontSizes({ sm: 14, md: 14, lg: 16 }),
   },
   subtitle2: {
-    fontWeight: 600,
+    fontWeight: 400,
     lineHeight: "150%",
     fontSize: pxToRem(14),
     ...responsiveFontSizes({ sm: 14, md: 14, lg: 14 }),
