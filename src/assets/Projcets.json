@@ -3,7 +3,7 @@
         "id": 1,
         "title": "Internet Service Provider Website",
         "imgUrl": "/projcets/fenieasy.png",
-        "link":"https://www.behance.net/gallery/195011475/Internet-Service-Provider-Website",
+        "link": "https://www.behance.net/gallery/195011475/Internet-Service-Provider-Website",
         "tags": [
             "UI/UX Design",
             "Development",
@@ -14,7 +14,7 @@
         "id": 2,
         "title": "Developer Hiring Platform Application",
         "imgUrl": "/projcets/techhack.png",
-        "link":"https://www.behance.net/gallery/195527507/Developer-Hiring-Platform",
+        "link": "https://www.behance.net/gallery/195527507/Developer-Hiring-Platform",
         "tags": [
             "UI/UX Design",
             "Development",
@@ -25,7 +25,7 @@
         "id": 3,
         "title": "Self Service Kiosk",
         "imgUrl": "/projcets/kiosk.png",
-        "link":"",
+        "link": "",
         "tags": [
             "Research",
             "Wireframe",
@@ -34,20 +34,20 @@
     },
     {
         "id": 4,
-        "title": "NBR - Aarong VAT Report Portal",
-        "imgUrl": "/projcets/nbr.png",
-        "link":"",
+        "title": "Accounts application for bill payment",
+        "imgUrl": "/projcets/accounts.png",
+        "link": "https://www.behance.net/gallery/195744451/Accounts-application-for-bill-payment",
         "tags": [
-            "Research",
+            "Redesign",
             "Wireframe",
-            "UI Design"
+            "Application"
         ]
     },
     {
         "id": 5,
         "title": "Digital Agency Website",
         "imgUrl": "/projcets/insight.png",
-        "link":"",
+        "link": "",
         "tags": [
             "UI/UX Design",
             "Development",
@@ -58,7 +58,7 @@
         "id": 6,
         "title": "Digital Distribution System",
         "imgUrl": "/projcets/dds.png",
-        "link":"",
+        "link": "",
         "tags": [
             "Research",
             "Wireframe",
@@ -69,7 +69,7 @@
         "id": 7,
         "title": "Paediatric Orthopeadic Society Website",
         "imgUrl": "/projcets/posb.png",
-        "link":"",
+        "link": "",
         "tags": [
             "UI/UX Design",
             "Development",
