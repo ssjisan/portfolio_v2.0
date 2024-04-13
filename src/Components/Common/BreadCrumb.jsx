@@ -12,7 +12,6 @@ export default function BreadCrumb() {
     const { light } = useContext(DataContext)
     const { pathname } = useLocation();
     const currentItem = main.find(item => item.link === pathname);
-
     const BreadcrumbSx = { p: forBelow768 ? "24px 0px" : "40px 0px", display: "flex", gap: "16px", justifyContent: "flex-start", alignItems: "center" }
     const IconBoxSx = { width: "24px", height: "24px", display: "flex", justifyContent: "center", alignItems: "center" }
     return (

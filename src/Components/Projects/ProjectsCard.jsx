@@ -2,7 +2,9 @@ import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { DataContext } from "../../DataProcessing/DataProcessing";
 import { useContext } from "react";
 import Projects from "../../assets/Projcets.json"
+import { Link } from "react-router-dom";
 export default function ProjectsCard() {
+
     const forBelow767 = useMediaQuery("(max-width:767px)");
     const { light } = useContext(DataContext)
     const CardSx = { display: "flex", flexDirection: "column", gap: "40px" }
@@ -28,7 +30,7 @@ export default function ProjectsCard() {
         cursor: "pointer",
         transition: "box-shadow 0.45s ease-in-out",
         "&:hover": {
-            boxShadow: light ? "0px 0px 0px 3px #fff" : "0px 0px 0px 3px #000000"
+            boxShadow: light ? "0px 0px 0px 2px #fff" : "0px 0px 0px 2px #000000"
         },
     }
     const ChipContainerSx = { display: "flex", gap: "16px", flexWrap: "wrap" }
@@ -38,7 +40,7 @@ export default function ProjectsCard() {
                 {Projects.map((data) => {
                     return (
                         <Grid item xs={12} sm={12} md={6} lg={6} key={data.id}>
-                            <a href={data.link} style={{ textDecoration: "none" }} target="_blank">
+                            <Link to={`/projects/${data.title}`} style={{textDecoration:"none"}}>
                                 <Box sx={CardSx} >
                                     <Box sx={{ ...ImageSx, height: forBelow767 ? "375px" : (data.id % 2 === 0 ? "450px" : "580px"), mt: !forBelow767 && (data.id % 2 === 0 && "64px"), }}>
                                         <img src={data.imgUrl} width="100%" height="100%" style={{ transition: "transform .5s ease-in-out", objectFit: "cover" }} />
@@ -58,7 +60,7 @@ export default function ProjectsCard() {
                                         </Box>
                                     </Box>
                                 </Box>
-                            </a>
+                            </Link>
                         </Grid>
                     )
                 })
