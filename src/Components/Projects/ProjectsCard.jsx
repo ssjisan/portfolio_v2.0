@@ -20,14 +20,15 @@ export default function ProjectsCard() {
         borderRadius: "1000px",
         p: "4px 16px",
         height: "32px",
-        border: light ? "1.5px solid #fff" : "1.5px solid #111827",
+        // border: light ? "1.5px solid #fff" : "1.5px solid #111827",
+        boxShadow: light ? "0px 0px 0px 1px #fff" : "0px 0px 0px 1px #000000",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         cursor: "pointer",
-        transition: "transform .5s ease-in-out",
+        transition: "box-shadow 0.45s ease-in-out",
         "&:hover": {
-            transform: "scale(1.10)", // Scale the image on hover
+            boxShadow: light ? "0px 0px 0px 3px #fff" : "0px 0px 0px 3px #000000"
         },
     }
     const ChipContainerSx = { display: "flex", gap: "16px", flexWrap: "wrap" }
@@ -49,7 +50,7 @@ export default function ProjectsCard() {
                                                 data.tags.map((data, i) => {
                                                     return (
                                                         <Box sx={ChipSx} key={i}>
-                                                            <Typography variant="subtitle2" color="text.secondary">{data}</Typography>
+                                                            <Typography variant="subtitle2" color={light ? "text.tertiary" : "text.primary"}>{data}</Typography>
                                                         </Box>
                                                     )
                                                 })

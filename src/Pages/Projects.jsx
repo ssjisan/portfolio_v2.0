@@ -4,6 +4,7 @@ import HeroSection from "../Components/Projects/HeroSection";
 import { useContext } from "react";
 import { DataContext } from "../DataProcessing/DataProcessing";
 import ProjectList from "../Components/Projects/ProjectList";
+import MoreProject from "../Components/Projects/MoreProject";
 
 export default function Projects() {
     const { light } = useContext(DataContext)
@@ -13,6 +14,7 @@ export default function Projects() {
             <Navbar />
             <HeroSection />
             <ProjectList />
+            <MoreProject/>
         </Box>
     )
 }

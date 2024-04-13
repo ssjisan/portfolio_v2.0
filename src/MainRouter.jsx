@@ -4,6 +4,7 @@ import About from "./Pages/About";
 import Career from "./Pages/Career";
 import Projects from "./Pages/Projects";
 import Resume from "./Pages/Resume";
+import ProjectDetails from "./Pages/ProjectDetails";
 
 
 export default function MainRouter() {
@@ -14,6 +15,7 @@ export default function MainRouter() {
       <Route path="/career" element={<Career />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/resume" element={<Resume />} />
+      <Route path="/projects/details" element={<ProjectDetails />} />
     </Routes>
   );
 }
