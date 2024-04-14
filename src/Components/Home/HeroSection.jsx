@@ -49,22 +49,29 @@ export default function HeroSection() {
             borderRadius: "100%",
           }}>
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{
-                type: "spring",
-                stiffness: 180,
-                damping: 30
+                type: "tween",
+                duration: 0.5
               }}>
               <Avatar src="/pp.png" sx={{ width: forBelow768 ? "180px" : "210px", height: forBelow768 ? "180px" : "210px" }} />
             </motion.div>
           </Box>
         </Box>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: forBelow768 ? "24px" : "16px", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
-          <Typography variant='h2' color={light ? "text.tertiary" : "text.primary"}>Hey, I&apos;m Jisan</Typography>
-          <Typography variant='h2' color={light ? "text.tertiary" : "text.primary"}>An UI/UX Engineer with over 3 years of experience.</Typography>
-          <Typography variant='h6' color="text.secondary" sx={{ width: "100%", maxWidth: "780px" }}>Currently, I&apos;m applying my expertise at Aarong, where I specialize in crafting seamless user experiences with a passion for clean and intuitive design.</Typography>
-        </Box>
+        <motion.p
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "tween",
+            delay: 0.1
+          }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: forBelow768 ? "24px" : "16px", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+            <Typography variant='h2' color={light ? "text.tertiary" : "text.primary"}>Hey, I&apos;m Jisan</Typography>
+            <Typography variant='h2' color={light ? "text.tertiary" : "text.primary"}>An UI/UX Engineer with over 3 years of experience.</Typography>
+            <Typography variant='h6' color="text.secondary" sx={{ width: "100%", maxWidth: "780px" }}>Currently, I&apos;m applying my expertise at Aarong, where I specialize in crafting seamless user experiences with a passion for clean and intuitive design.</Typography>
+          </Box>
+        </motion.p>
       </Container>
     </Box>
   )

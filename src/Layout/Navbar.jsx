@@ -5,6 +5,8 @@ import { DataContext } from "../DataProcessing/DataProcessing";
 // import Logo from "../assets/Logo";
 import { Menu, Moon, Sun } from "../assets/Icons";
 import MenuDrawer from "./MenuDrawer";
+import { motion } from "framer-motion"
+
 export default function Navbar() {
     const { goToTop, handleMode, light, toggleDrawer, open } = useContext(DataContext);
     // eslint-disable-next-line
@@ -39,33 +41,41 @@ export default function Navbar() {
         alignItems: "center",
         borderRadius: "8px",
     }
-
+    const StyleSx = { display: "flex", justifyContent: "space-between", alignItems: "center" }
     // Configure Style End
 
     return (
-        <Box sx={NavSx}>
-            <Container sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <Link to="/">
-                    <Box sx={LogoSx} onClick={goToTop}>
-                        {light ? <img src={"/lightLogo.svg"} width="100%" />
+        <motion.div
+            initial={{ y: -100, opacity: .5 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+                duration: 0.5
+            }}
+        >
+            <Box sx={NavSx}>
+                <Container sx={StyleSx} >
+                    <Link to="/">
+                        <Box sx={LogoSx} onClick={goToTop}>
+                            {light ? <img src={"/lightLogo.svg"} width="100%" />
+                                :
+                                <img src={"/Logo.svg"} width="100%" />}
+                        </Box>
+                    </Link>
+                    <Box sx={{ display: "flex", gap: "8px" }}>
+                        {light ? <IconButton sx={{ ...MenuButtonSx, border: "1px solid rgba(255, 255, 255, 0.32)", }} onClick={handleMode}>
+                            <Sun />
+                        </IconButton>
                             :
-                            <img src={"/Logo.svg"} width="100%" />}
+                            <IconButton sx={{ ...MenuButtonSx, border: "1px solid rgba(17, 24, 39, 0.32)", }} onClick={handleMode}>
+                                <Moon />
+                            </IconButton>}
+                        <IconButton sx={{ ...MenuButtonSx, background: light ? "rgba(255, 255, 255, 0.12)" : "rgba(17, 24, 39, 0.08)", }} onClick={toggleDrawer}>
+                            <Menu />
+                        </IconButton>
                     </Box>
-                </Link>
-                <Box sx={{ display: "flex", gap: "8px" }}>
-                    {light ? <IconButton sx={{ ...MenuButtonSx, border: "1px solid rgba(255, 255, 255, 0.32)", }} onClick={handleMode}>
-                        <Sun />
-                    </IconButton>
-                        :
-                        <IconButton sx={{ ...MenuButtonSx, border: "1px solid rgba(17, 24, 39, 0.32)", }} onClick={handleMode}>
-                            <Moon />
-                        </IconButton>}
-                    <IconButton sx={{ ...MenuButtonSx, background: light ? "rgba(255, 255, 255, 0.12)" : "rgba(17, 24, 39, 0.08)", }} onClick={toggleDrawer}>
-                        <Menu />
-                    </IconButton>
-                </Box>
-            </Container>
-            <MenuDrawer open={open} />
-        </Box>
+                </Container>
+                <MenuDrawer open={open} />
+            </Box>
+        </motion.div>
     )
 }

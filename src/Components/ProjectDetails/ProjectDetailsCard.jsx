@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import { motion } from "framer-motion"
 
 export default function ProjectDetailsCard() {
     const images = [
@@ -16,9 +17,21 @@ export default function ProjectDetailsCard() {
         <Box>
             {images.map((data, i) => {
                 return (
-                    <Box key={i} sx={{ width: "100%" }}>
-                        <img src={data} alt="images" width="100%"/>
-                    </Box>
+                    <motion.div
+                        key={i}
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                duration: 0.5
+                            }
+                        }}
+                        viewport={{ once: true }}>
+                        <Box sx={{ width: "100%" }}>
+                            <img src={data} alt="images" width="100%" />
+                        </Box>
+                    </motion.div>
                 )
             })}
         </Box>

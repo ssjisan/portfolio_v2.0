@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom"
 import { DataContext } from "../DataProcessing/DataProcessing"
 import { Close, Facebook, LinkedIn, Whatsapp } from "../assets/Icons"
 import { main } from "../Layout/NavConfig"
+import { motion } from "framer-motion"
+
 export default function MenuDrawer() {
     const { toggleDrawer, open, handleDrawerClose, goToTop, light } = useContext(DataContext)
     const forBelow768 = useMediaQuery("(max-width:768px)");
@@ -14,7 +16,7 @@ export default function MenuDrawer() {
     const linkStyle = {
         textDecoration: "none",
         color: "#121120",
-        width: "fit-content"
+        width: "fit-content",
     };
     const DrawerSx = {
         "& .MuiDrawer-paper": {
@@ -38,7 +40,7 @@ export default function MenuDrawer() {
         height: "-webkit-fill-available",
         display: "flex",
         flexDirection: "column",
-        gap: "24px"
+        gap: "24px",
     }
     const CloseButtonSx = {
         borderRadius: "8px",
@@ -85,32 +87,76 @@ export default function MenuDrawer() {
             </Box>
             <Box sx={MenuOptionSx}>
                 {main.map((data) => {
+                    const dynamicDelay = 0.05 * (data.id + 1);
+
                     return (
-                        <Link key={data.id} to={data.link} style={linkStyle} onClick={handleDrawerClose}>
-                            <Typography variant="h1" color={light ? "text.tertiary" : "text.primary"} sx={{ cursor: "pointer", textDecoration: pathname === data.link && "underline" }}>{data.title}</Typography>
+                        <Link to={data.link} style={linkStyle} onClick={handleDrawerClose} key={data.id}>
+                            <motion.div
+                                initial={{ y: -100, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: dynamicDelay
+                                }}
+                            >
+                                <Typography variant="h1" color={light ? "text.tertiary" : "text.primary"} sx={{
+                                    cursor: "pointer", textDecoration: pathname === data.link && "underline"
+                                }}>{data.title}</Typography>
+                            </motion.div>
                         </Link>
                     )
                 })}
             </Box>
             <Box sx={BottomSx}>
-                <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>ssjisan.dev@gmail.com</Typography>
-                <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>+880 1675 89 39 67</Typography>
+                <Box>
+                    <motion.div
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.1
+                        }}
+                    >
+                        <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>ssjisan.dev@gmail.com</Typography>
+                    </motion.div>
+                </Box>
+                <Box>
+                    <motion.div
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.25
+                        }}
+                    >
+                        <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>+880 1675 89 39 67</Typography>
+                    </motion.div>
+                </Box>
                 <Box sx={SocialMediaSx}>
-                    <a href="https://www.linkedin.com/in/ssjisan/" target="_blank">
-                        <IconButton>
-                            <LinkedIn />
-                        </IconButton>
-                    </a>
-                    <a href="https://www.facebook.com/userjisan/" target="_blank">
-                        <IconButton>
-                            <Facebook />
-                        </IconButton>
-                    </a>
-                    <a href="https://wa.me/8801675893967" target="_blank">
-                        <IconButton>
-                            <Whatsapp />
-                        </IconButton>
-                    </a>
+                    <motion.div
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.4
+                        }}
+                    >
+                        <a href="https://www.linkedin.com/in/ssjisan/" target="_blank">
+                            <IconButton>
+                                <LinkedIn />
+                            </IconButton>
+                        </a>
+                        <a href="https://www.facebook.com/userjisan/" target="_blank">
+                            <IconButton>
+                                <Facebook />
+                            </IconButton>
+                        </a>
+                        <a href="https://wa.me/8801675893967" target="_blank">
+                            <IconButton>
+                                <Whatsapp />
+                            </IconButton>
+                        </a>
+                    </motion.div>
                 </Box>
             </Box>
         </Drawer>

@@ -3,6 +3,8 @@ import { DataContext } from "../../DataProcessing/DataProcessing";
 import { useContext } from "react";
 import Projects from "../../assets/Projcets.json"
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion"
+
 export default function ProjectsCard() {
 
     const forBelow767 = useMediaQuery("(max-width:767px)");
@@ -40,27 +42,38 @@ export default function ProjectsCard() {
                 {Projects.map((data) => {
                     return (
                         <Grid item xs={12} sm={12} md={6} lg={6} key={data.id}>
-                            <Link to={`/projects/${data.title}`} style={{textDecoration:"none"}}>
-                                <Box sx={CardSx} >
-                                    <Box sx={{ ...ImageSx, height: forBelow767 ? "375px" : (data.id % 2 === 0 ? "450px" : "580px"), mt: !forBelow767 && (data.id % 2 === 0 && "64px"), }}>
-                                        <img src={data.imgUrl} width="100%" height="100%" style={{ transition: "transform .5s ease-in-out", objectFit: "cover" }} />
-                                    </Box>
-                                    <Box sx={ContentBoxSx}>
-                                        <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>{data.title}</Typography>
-                                        <Box sx={ChipContainerSx}>
-                                            {
-                                                data.tags.map((data, i) => {
-                                                    return (
-                                                        <Box sx={ChipSx} key={i}>
-                                                            <Typography variant="subtitle2" color={light ? "text.tertiary" : "text.primary"}>{data}</Typography>
-                                                        </Box>
-                                                    )
-                                                })
-                                            }
+                            <motion.div
+                                initial={{ y: 100, opacity: 0 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        duration: 0.5
+                                    }
+                                }}
+                                viewport={{ once: true }}>
+                                <Link to={`/projects/${data.title}`} style={{ textDecoration: "none" }}>
+                                    <Box sx={CardSx} >
+                                        <Box sx={{ ...ImageSx, height: forBelow767 ? "375px" : (data.id % 2 === 0 ? "450px" : "580px"), mt: !forBelow767 && (data.id % 2 === 0 && "64px"), }}>
+                                            <img src={data.imgUrl} width="100%" height="100%" style={{ transition: "transform .5s ease-in-out", objectFit: "cover" }} />
+                                        </Box>
+                                        <Box sx={ContentBoxSx}>
+                                            <Typography variant="h4" color={light ? "text.tertiary" : "text.primary"}>{data.title}</Typography>
+                                            <Box sx={ChipContainerSx}>
+                                                {
+                                                    data.tags.map((data, i) => {
+                                                        return (
+                                                            <Box sx={ChipSx} key={i}>
+                                                                <Typography variant="subtitle2" color={light ? "text.tertiary" : "text.primary"}>{data}</Typography>
+                                                            </Box>
+                                                        )
+                                                    })
+                                                }
+                                            </Box>
                                         </Box>
                                     </Box>
-                                </Box>
-                            </Link>
+                                </Link>
+                            </motion.div>
                         </Grid>
                     )
                 })
