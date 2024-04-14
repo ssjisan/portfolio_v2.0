@@ -7,15 +7,16 @@ export const DataContext = createContext();
 
 export default function DataProcessing({ children }) {
     const { light, handleMode } = ThemeController()
-    const { toggleDrawer, open, handleDrawerClose } = MenuDrawerController()
+    const { toggleDrawer, open, handleDrawerClose,goToTop } = MenuDrawerController()
+
+    
     return (
         <DataContext.Provider
             value={{
                 // Theme Controller
                 light, handleMode,
                 // Drawer for menu
-                toggleDrawer, open, handleDrawerClose
-
+                toggleDrawer, open, handleDrawerClose,goToTop                
             }}
         >
             {children}

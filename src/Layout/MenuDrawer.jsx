@@ -85,10 +85,9 @@ export default function MenuDrawer() {
                     <Close />
                 </IconButton>
             </Box>
-            <Box sx={MenuOptionSx}>
+            <Box sx={MenuOptionSx}  onClick={goToTop}>
                 {main.map((data) => {
                     const dynamicDelay = 0.05 * (data.id + 1);
-
                     return (
                         <Link to={data.link} style={linkStyle} onClick={handleDrawerClose} key={data.id}>
                             <motion.div
