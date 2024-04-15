@@ -7,7 +7,7 @@ export default function ProjectDetailsCard({selectedProject}) {
     const { imgSet } = selectedProject;
 
     return (
-        <Box>
+        <Box sx={{pb:"48px"}}>
             {imgSet?.map((data, i) => {
                 return (
                     <motion.div
