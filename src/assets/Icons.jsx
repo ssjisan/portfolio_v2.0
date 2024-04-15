@@ -416,20 +416,14 @@ export const Uplabs = () => {
 export const TopArrow = ({ color }) => {
   return (
     <svg
-      width="32"
-      height="32"
-      viewBox="0 0 32 32"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M4 28L13.8787 18.1213C15.0503 16.9497 16.9497 16.9497 18.1213 18.1213L28 28"
-        stroke={color}
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M4 16L13.8787 6.12132C15.0503 4.94975 16.9497 4.94975 18.1213 6.12132L28 16"
+        d="M3 16.5L9.87868 9.62132C11.0503 8.44974 12.9497 8.44975 14.1213 9.62132L21 16.5"
         stroke={color}
         strokeWidth="2"
         strokeLinecap="round"
