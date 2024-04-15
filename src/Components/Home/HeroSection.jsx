@@ -37,27 +37,27 @@ export default function HeroSection() {
           position: "relative", mt: forBelow768 ? "120px" : "180px",
         }}>
           <Box sx={ImageContainerSx}></Box>
-          <Box sx={{
-            position: 'absolute', top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: forBelow768 ? "200px" : "230px",
-            height: forBelow768 ? "200px" : "230px",
-            border: "2px solid rgba(255, 255, 255, 0.32)", display: "flex", background: "rgba(255,255,255, 0.16)",
-            justifyContent: "center",
-            alignItems: "center",
-            borderRadius: "100%",
-          }}>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "tween",
-                duration: 0.5
-              }}>
-              <Avatar src="/pp.png" sx={{ width: forBelow768 ? "180px" : "210px", height: forBelow768 ? "180px" : "210px" }} />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "linear",
+              duration: 1,
+            }}>
+            <Box sx={{
+              position: 'absolute', top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: forBelow768 ? "200px" : "230px",
+              height: forBelow768 ? "200px" : "230px",
+              border: "2px solid rgba(255, 255, 255, 0.32)", display: "flex", background: "rgba(255,255,255, 0.16)",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: "100%",
+            }}>
+                <Avatar src="/pp.png" sx={{ width: forBelow768 ? "180px" : "210px", height: forBelow768 ? "180px" : "210px" }} />
+            </Box>
             </motion.div>
-          </Box>
         </Box>
         <motion.p
           initial={{ y: 100, opacity: 0 }}

@@ -1,21 +1,14 @@
 import { Box } from "@mui/material";
 import { motion } from "framer-motion"
+import PropTypes from 'prop-types';
 
-export default function ProjectDetailsCard() {
-    const images = [
-        "/projcets/feni-easy/1.png",
-        "/projcets/feni-easy/2.png",
-        "/projcets/feni-easy/3.png",
-        "/projcets/feni-easy/4.png",
-        "/projcets/feni-easy/5.png",
-        "/projcets/feni-easy/6.png",
-        "/projcets/feni-easy/7.png",
-        "/projcets/feni-easy/8.png",
-        "/projcets/feni-easy/9.png",
-    ]
+export default function ProjectDetailsCard({selectedProject}) {
+
+    const { imgSet } = selectedProject;
+
     return (
         <Box>
-            {images.map((data, i) => {
+            {imgSet?.map((data, i) => {
                 return (
                     <motion.div
                         key={i}
@@ -37,3 +30,9 @@ export default function ProjectDetailsCard() {
         </Box>
     )
 }
+
+ProjectDetailsCard.propTypes = {
+    selectedProject: PropTypes.shape({
+        imgSet: PropTypes.arrayOf(PropTypes.string).isRequired,
+    }),
+};

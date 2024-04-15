@@ -2,78 +2,107 @@
     {
         "id": 1,
         "title": "Internet Service Provider Website",
-        "imgUrl": "/projcets/fenieasy.png",
+        "imgUrl": "/projcets/feni-easy/fenieasy.png",
         "link": "https://www.behance.net/gallery/195011475/Internet-Service-Provider-Website",
         "tags": [
             "UI/UX Design",
             "Development",
             "Website"
+        ],
+        "imgSet": [
+            "/projcets/feni-easy/1.png",
+            "/projcets/feni-easy/2.png",
+            "/projcets/feni-easy/3.png",
+            "/projcets/feni-easy/4.png",
+            "/projcets/feni-easy/5.png",
+            "/projcets/feni-easy/6.png",
+            "/projcets/feni-easy/7.png",
+            "/projcets/feni-easy/8.png",
+            "/projcets/feni-easy/9.png",
+            "/projcets/feni-easy/10.png"
         ]
     },
     {
         "id": 2,
         "title": "Developer Hiring Platform Application",
-        "imgUrl": "/projcets/techhack.png",
+        "imgUrl": "/projcets/techhack/techhack.png",
         "link": "https://www.behance.net/gallery/195527507/Developer-Hiring-Platform",
         "tags": [
             "UI/UX Design",
             "Development",
             "Application"
+        ],
+        "imgSet": [
+            "/projcets/techhack/1.png",
+            "/projcets/techhack/2.png",
+            "/projcets/techhack/3.png",
+            "/projcets/techhack/4.png",
+            "/projcets/techhack/5.png",
+            "/projcets/techhack/6.png",
+            "/projcets/techhack/7.png",
+            "/projcets/techhack/8.png",
+            "/projcets/techhack/9.png",
+            "/projcets/techhack/10.png"
         ]
     },
     {
         "id": 3,
         "title": "Self Service Kiosk",
-        "imgUrl": "/projcets/kiosk.png",
+        "imgUrl": "/projcets/kiosk/1.png",
         "link": "",
         "tags": [
             "Research",
             "Wireframe",
             "UI Design"
+        ],
+        "imgSet": [
+            "/projcets/kiosk/1.png",
+            "/projcets/kiosk/2.png",
+            "/projcets/kiosk/3.png",
+            "/projcets/kiosk/4.png",
+            "/projcets/kiosk/5.png",
+            "/projcets/kiosk/6.png",
+            "/projcets/kiosk/7.png",
+            "/projcets/kiosk/8.png",
+            "/projcets/kiosk/9.png",
+            "/projcets/kiosk/10.png",
+            "/projcets/kiosk/11.png"
         ]
     },
     {
         "id": 4,
         "title": "Accounts application for bill payment",
-        "imgUrl": "/projcets/accounts.png",
+        "imgUrl": "/projcets/accounts/1.png",
         "link": "https://www.behance.net/gallery/195744451/Accounts-application-for-bill-payment",
         "tags": [
             "Redesign",
             "Wireframe",
             "Application"
+        ],
+        "imgSet": [
+            "/projcets/accounts/1.png",
+            "/projcets/accounts/2.png",
+            "/projcets/accounts/3.png",
+            "/projcets/accounts/4.png",
+            "/projcets/accounts/5.png",
+            "/projcets/accounts/6.png"
         ]
     },
     {
         "id": 5,
         "title": "Digital Agency Website",
-        "imgUrl": "/projcets/insight.png",
+        "imgUrl": "/projcets/insighttech/insight.png",
         "link": "",
         "tags": [
             "UI/UX Design",
             "Development",
             "Website"
-        ]
-    },
-    {
-        "id": 6,
-        "title": "Digital Distribution System",
-        "imgUrl": "/projcets/dds.png",
-        "link": "",
-        "tags": [
-            "Research",
-            "Wireframe",
-            "UI Design"
-        ]
-    },
-    {
-        "id": 7,
-        "title": "Paediatric Orthopeadic Society Website",
-        "imgUrl": "/projcets/posb.png",
-        "link": "",
-        "tags": [
-            "UI/UX Design",
-            "Development",
-            "Website"
+        ],
+        "imgSet": [
+            "/projcets/insighttech/insight.png",
+            "/projcets/insighttech/insight.png",
+            "/projcets/insighttech/insight.png",
+            "/projcets/insighttech/insight.png"
         ]
     }
 ]

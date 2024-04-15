@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 export default function ProjectsCard() {
 
     const forBelow767 = useMediaQuery("(max-width:767px)");
-    const { light } = useContext(DataContext)
+    const { light,goToTop } = useContext(DataContext)
     const CardSx = { display: "flex", flexDirection: "column", gap: "40px" }
     const ImageSx = {
         width: "100%",
@@ -41,7 +41,7 @@ export default function ProjectsCard() {
             <Grid container spacing={4} >
                 {Projects.map((data) => {
                     return (
-                        <Grid item xs={12} sm={12} md={6} lg={6} key={data.id}>
+                        <Grid item xs={12} sm={12} md={6} lg={6} key={data.id} onClick={goToTop}>
                             <motion.div
                                 initial={{ y: 100, opacity: 0 }}
                                 whileInView={{
