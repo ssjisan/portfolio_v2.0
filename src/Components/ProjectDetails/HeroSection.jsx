@@ -1,7 +1,9 @@
 import { Box, Container, Typography } from "@mui/material";
 import { DataContext } from "../../DataProcessing/DataProcessing";
 import { useContext } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import { Arrow } from "../../assets/Icons";
+import { Link } from "react-router-dom";
 
 export default function HeroSection({ selectedProject }) {
   const { light } = useContext(DataContext);
@@ -32,6 +34,28 @@ export default function HeroSection({ selectedProject }) {
           gap: "40px",
         }}
       >
+        <Link to="/projects" style={{textDecoration:"none"}}>
+          <Box sx={{ display: "flex", gap: "2px", alignItems: "center" }}>
+            <Box
+              sx={{
+                height: "32px",
+                width: "32px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                rotate: "180deg"
+              }}
+            >
+              <Arrow />
+            </Box>
+            <Typography
+              variant="body2"
+              color={light ? "text.tertiary" : "text.primary"}
+            >
+              Back to project
+            </Typography>
+          </Box>
+        </Link>
         <Box
           sx={{
             display: "flex",
@@ -68,9 +92,9 @@ export default function HeroSection({ selectedProject }) {
 }
 
 HeroSection.propTypes = {
-    selectedProject: PropTypes.shape({
-        imgSet: PropTypes.arrayOf(PropTypes.string).isRequired,
-        tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-        title: PropTypes.string.isRequired,
-    }),
+  selectedProject: PropTypes.shape({
+    imgSet: PropTypes.arrayOf(PropTypes.string).isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    title: PropTypes.string.isRequired,
+  }),
 };
