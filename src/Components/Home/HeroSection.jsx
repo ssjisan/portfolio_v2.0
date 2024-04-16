@@ -34,7 +34,7 @@ export default function HeroSection() {
       <img src="/noise.png" alt="noise" style={{ position: "absolute", opacity: "0.32", width: "100%", height: "100%" }} />
       <Container sx={ContainerSx}>
         <Box sx={{
-          position: "relative", mt: forBelow768 ? "120px" : "180px",
+          position: "relative", mt: forBelow768 ? "15vh" : "20vh",
         }}>
           <Box sx={ImageContainerSx}></Box>
           <motion.div
