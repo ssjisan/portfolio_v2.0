@@ -35,6 +35,7 @@ export default function GoToTop() {
           background: light
             ? "rgba(255, 255, 255, 0.12)"
             : "rgba(17, 24, 39, 0.08)",
+          backdropFilter: "blur(2px)",
         }}
         onClick={goToTop}
       >

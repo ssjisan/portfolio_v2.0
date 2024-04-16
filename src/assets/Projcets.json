@@ -91,7 +91,7 @@
     {
         "id": 5,
         "title": "Digital Agency Website",
-        "imgUrl": "/projcets/insighttech/insight.png",
+        "imgUrl": "/projcets/insighttech/1.png",
         "link": "",
         "tags": [
             "UI/UX Design",
@@ -99,10 +99,19 @@
             "Website"
         ],
         "imgSet": [
-            "/projcets/insighttech/insight.png",
-            "/projcets/insighttech/insight.png",
-            "/projcets/insighttech/insight.png",
-            "/projcets/insighttech/insight.png"
+            "/projcets/insighttech/1.png",
+            "/projcets/insighttech/2.png",
+            "/projcets/insighttech/3.png",
+            "/projcets/insighttech/4.png",
+            "/projcets/insighttech/5.png",
+            "/projcets/insighttech/6.png",
+            "/projcets/insighttech/7.png",
+            "/projcets/insighttech/8.png",
+            "/projcets/insighttech/9.png",
+            "/projcets/insighttech/10.png",
+            "/projcets/insighttech/11.png",
+            "/projcets/insighttech/12.png",
+            "/projcets/insighttech/13.png"
         ]
     }
 ]
