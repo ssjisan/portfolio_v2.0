@@ -28,6 +28,15 @@ export default function HeroSection() {
     justifyContent: "center",
     alignItems: "center",
     filter: "blur(16px)",
+    animation: 'rotateBackground 5s linear infinite', // Duration and properties of animation
+    '@keyframes rotateBackground': {
+        from: {
+            transform: 'rotate(0deg)',
+        },
+        to: {
+            transform: 'rotate(360deg)',
+        },
+    },
   };
   return (
     <Box sx={{ height: "100vh", position: "relative", width: "100%" }}>
