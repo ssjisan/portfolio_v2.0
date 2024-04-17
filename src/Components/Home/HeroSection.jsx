@@ -40,7 +40,7 @@ export default function HeroSection() {
   };
   return (
     <Box sx={{ height: "100vh", position: "relative", width: "100%" }}>
-      <img src="/noise.png" alt="noise" style={{ position: "absolute", opacity: "0.32", width: "100%", height: "100%" }} />
+      <img src="/bg.webp" alt="noise" style={{ position: "absolute", opacity: "0.32", width: "100%", height: "100%" }} />
       <Container sx={ContainerSx}>
         <Box sx={{
           position: "relative", mt: forBelow768 ? "15vh" : "20vh",
@@ -64,7 +64,7 @@ export default function HeroSection() {
               alignItems: "center",
               borderRadius: "100%",
             }}>
-                <Avatar src="/pp.png" sx={{ width: forBelow768 ? "180px" : "210px", height: forBelow768 ? "180px" : "210px" }} />
+                <Avatar src="/pp.webp" sx={{ width: forBelow768 ? "180px" : "210px", height: forBelow768 ? "180px" : "210px" }} />
             </Box>
             </motion.div>
         </Box>

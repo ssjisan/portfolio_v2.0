@@ -12,6 +12,7 @@ import { DataContext } from "../DataProcessing/DataProcessing";
 import { Menu, Moon, Sun } from "../assets/Icons";
 import MenuDrawer from "./MenuDrawer";
 import { motion } from "framer-motion";
+import Logo from "../assets/Logo";
 
 export default function Navbar() {
   const { goToTop, handleMode, light, toggleDrawer, open } =
@@ -72,11 +73,7 @@ export default function Navbar() {
         <Container sx={StyleSx}>
           <Link to="/">
             <Box sx={LogoSx} onClick={goToTop}>
-              {light ? (
-                <img src={"/lightLogo.svg"} width="100%" />
-              ) : (
-                <img src={"/Logo.svg"} width="100%" />
-              )}
+              <Logo changeColor={light ? "#FFFFFF" : "#111827"} fixedColor="#909090"/>
             </Box>
           </Link>
           <Box sx={{ display: "flex", gap: "8px" }}>

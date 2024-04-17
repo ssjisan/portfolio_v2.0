@@ -28,13 +28,13 @@ export default function HeroSection({ selectedProject }) {
     <Container>
       <Box
         sx={{
-          pt: "120px",
+          pt: { xs: "64px", sm: "80px", md: "120px" },
           display: "flex",
           flexDirection: "column",
           gap: "40px",
         }}
       >
-        <Link to="/projects" style={{textDecoration:"none"}}>
+        <Link to="/projects" style={{ textDecoration: "none" }}>
           <Box sx={{ display: "flex", gap: "2px", alignItems: "center" }}>
             <Box
               sx={{
@@ -43,7 +43,7 @@ export default function HeroSection({ selectedProject }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                rotate: "180deg"
+                rotate: "180deg",
               }}
             >
               <Arrow />

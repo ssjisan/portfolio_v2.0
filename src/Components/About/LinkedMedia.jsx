@@ -29,7 +29,7 @@ export default function LinkedMedia() {
     return (
         <Box sx={{ width: "100%", pl: forBelow375 ? "0px" : "40px", display: "flex", flexDirection: "column", gap: "40px", mt: forBelow767 && "40px" }}>
             <Box sx={{ width: (forBelow375 && "100%") || (forBelow991 && "280px") || "380px", height: (forBelow375 && "100%") || (forBelow991 && "280px") || "380px", borderRadius: "16px", transform: " rotate(-357deg)", overflow: "hidden" }}>
-                <img src="/pp.png" width="100%" height="100%" />
+                <img src="/pp.webp" width="100%" height="100%" />
             </Box>
             <Box sx={MediaListSx}>
                 {
