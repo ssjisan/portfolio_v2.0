@@ -13,7 +13,7 @@ export default function MenuDrawerController() {
         window.scrollTo({
             top: 0,
             behavior: "smooth",
-        },500);
+        });
     };
     return (
         {
